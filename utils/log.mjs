@@ -1,4 +1,5 @@
-const alert = require('cli-alerts');
+import alert from 'cli-alerts';
+import chalk from 'chalk';
 
 //Chalk Colors
 
@@ -11,7 +12,7 @@ const colors = {
 	darkGray: [90, 90, 90]
 };
 
-module.exports.log = info => {
+const log = info => {
 	alert({
 		type: `warning`,
 		name: `DEBUG LOG`,
@@ -22,9 +23,9 @@ module.exports.log = info => {
 	console.log();
 };
 
-module.exports.logIntro = async ({ name, dir }) => {
+const logIntro = async ({ name, dir }) => {
 	//TODO: Transform into normal inport
-	const chalk = await import('chalk').then(chalk => chalk.default);
+	// const chalk = await import('chalk').then(chalk => chalk.default);
 	console.info('\n');
 	console.info(
 		`✨  Creating the ${chalk.bold.rgb(...colors.gold)(name)} component ✨`
@@ -43,14 +44,14 @@ module.exports.logIntro = async ({ name, dir }) => {
 	console.info('\n');
 };
 
-module.exports.logItemCompletion = async successText => {
+const logItemCompletion = async successText => {
 	//TODO: Transform into normal inport
 	const chalk = await import('chalk').then(chalk => chalk.default);
 	const checkmark = chalk.rgb(...colors.green)('✓');
 	console.info(`${checkmark} ${successText}`);
 };
 
-module.exports.logConclusion = async () => {
+const logConclusion = async () => {
 	//TODO: Transform into normal inport
 	const chalk = await import('chalk').then(chalk => chalk.default);
 	console.info('\n');
@@ -61,7 +62,7 @@ module.exports.logConclusion = async () => {
 	console.info('\n');
 };
 
-module.exports.logError = async error => {
+const logError = async error => {
 	//TODO: Transform into normal inport
 	const chalk = await import('chalk').then(chalk => chalk.default);
 	console.info('\n');
@@ -69,3 +70,5 @@ module.exports.logError = async error => {
 	console.info(chalk.rgb(...colors.red)(error));
 	console.info('\n');
 };
+
+export { log, logIntro, logItemCompletion, logConclusion, logError };
