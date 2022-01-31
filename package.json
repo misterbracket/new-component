@@ -4,6 +4,10 @@
 	"version": "0.0.1",
 	"license": "UNLICENSED",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/misterbracket/new-component.git"
+	},
 	"bin": {
 		"new-component": "index.js"
 	},
