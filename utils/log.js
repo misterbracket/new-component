@@ -1,5 +1,5 @@
-import alert from 'cli-alerts';
-import chalk from 'chalk';
+const alert = require('cli-alerts');
+const chalk = require('chalk');
 
 //Chalk Colors
 
@@ -12,7 +12,7 @@ const colors = {
 	darkGray: [90, 90, 90]
 };
 
-const log = info => {
+module.exports.log = info => {
 	alert({
 		type: `warning`,
 		name: `DEBUG LOG`,
@@ -23,7 +23,7 @@ const log = info => {
 	console.log();
 };
 
-const logIntro = async ({ name, dir }) => {
+module.exports.logIntro = ({ name, dir }) => {
 	console.info(
 		`✨  Creating the ${chalk.bold.rgb(...colors.gold)(name)} component ✨`
 	);
@@ -41,12 +41,12 @@ const logIntro = async ({ name, dir }) => {
 	console.info('\n');
 };
 
-const logItemCompletion = async successText => {
+module.exports.logItemCompletion = successText => {
 	const checkmark = chalk.rgb(...colors.green)('✓');
 	console.info(`${checkmark} ${successText}`);
 };
 
-const logConclusion = async () => {
+module.exports.logConclusion = () => {
 	console.info('\n');
 	console.info(chalk.bold.rgb(...colors.green)('Component created! 🚀 '));
 	console.info(
@@ -55,11 +55,9 @@ const logConclusion = async () => {
 	console.info('\n');
 };
 
-const logError = async error => {
+module.exports.logError = error => {
 	console.info('\n');
 	console.info(chalk.bold.rgb(...colors.red)('Error creating component.'));
 	console.info(chalk.rgb(...colors.red)(error));
 	console.info('\n');
 };
-
-export { log, logIntro, logItemCompletion, logConclusion, logError };

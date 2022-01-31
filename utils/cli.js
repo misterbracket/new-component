@@ -1,5 +1,5 @@
-import meow from 'meow';
-import meowHelp from 'cli-meow-help';
+const meow = require('meow');
+const meowHelp = require('cli-meow-help');
 
 const flags = {
 	directory: {
@@ -16,15 +16,11 @@ const flags = {
 	},
 	clear: {
 		type: `boolean`,
-		default: true,
+		default: false,
 		alias: `c`,
 		desc: `Clear the console`
 	},
-	noClear: {
-		type: `boolean`,
-		default: false,
-		desc: `Don't clear the console`
-	},
+
 	debug: {
 		type: `boolean`,
 		default: false,
@@ -57,4 +53,4 @@ const options = {
 	flags
 };
 
-export default meow(helpText, options);
+module.exports = meow(helpText, options);

@@ -1,15 +1,14 @@
 {
 	"name": "@maxklammer/new-component",
 	"description": "Creates new React component",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"license": "UNLICENSED",
-	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/misterbracket/new-component.git"
 	},
 	"bin": {
-		"new-component": "index.js"
+		"new-component": " --experimental-json-modules index.js"
 	},
 	"author": {
 		"name": "Max Klammer",
@@ -28,7 +27,7 @@
 		"format": "prettier --write \"./**/*.{js,json}\""
 	},
 	"dependencies": {
-		"chalk": "^5.0.0",
+		"chalk": "^4.1.2",
 		"cli-alerts": "^1.2.2",
 		"cli-handle-error": "^4.4.0",
 		"cli-handle-unhandled": "^1.1.1",

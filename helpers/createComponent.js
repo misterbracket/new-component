@@ -1,23 +1,23 @@
-import fs from 'fs';
-import path from 'path';
-import prettier from 'prettier';
+const fs = require('fs');
+const path = require('path');
+const prettier = require('prettier');
 
-import {
+const {
 	logIntro,
 	logItemCompletion,
 	logConclusion,
 	logError
-} from './../utils/log.mjs';
+} = require('./../utils/log');
 
-import {
+const {
 	mkDirPromise,
 	readFilePromiseRelative,
 	writeFilePromise
-} from './../utils/files.mjs';
+} = require('./../utils/files');
 
 const prettify = template => prettier.format(template, { parser: 'babel' });
 
-export default ({ componentName, lang, directory }) => {
+module.exports = ({ componentName, lang, directory }) => {
 	// Find the path to the selected template file.
 	const templatePath = `./templates/functional.js`;
 

@@ -7,10 +7,10 @@
  * @author Max Klammer <http://maxklammer.com>
  */
 
-import init from './utils/init.mjs';
-import cli from './utils/cli.mjs';
-import { log } from './utils/log.mjs';
-import createComponent from './helpers/createComponent.mjs';
+const init = require('./utils/init');
+const cli = require('./utils/cli');
+const { log } = require('./utils/log');
+const createComponent = require('./helpers/createComponent');
 
 const input = cli.input;
 const flags = cli.flags;
