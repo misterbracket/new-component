@@ -30,9 +30,7 @@
 		"cli-handle-unhandled": "^1.1.1",
 		"cli-meow-help": "^2.0.2",
 		"cli-welcome": "^2.2.2",
-		"meow": "^9.0.0"
-	},
-	"devDependencies": {
+		"meow": "^9.0.0",
 		"prettier": "^2.5.1"
 	}
 }

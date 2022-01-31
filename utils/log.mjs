@@ -24,9 +24,6 @@ const log = info => {
 };
 
 const logIntro = async ({ name, dir }) => {
-	//TODO: Transform into normal inport
-	// const chalk = await import('chalk').then(chalk => chalk.default);
-	console.info('\n');
 	console.info(
 		`✨  Creating the ${chalk.bold.rgb(...colors.gold)(name)} component ✨`
 	);
@@ -45,15 +42,11 @@ const logIntro = async ({ name, dir }) => {
 };
 
 const logItemCompletion = async successText => {
-	//TODO: Transform into normal inport
-	const chalk = await import('chalk').then(chalk => chalk.default);
 	const checkmark = chalk.rgb(...colors.green)('✓');
 	console.info(`${checkmark} ${successText}`);
 };
 
 const logConclusion = async () => {
-	//TODO: Transform into normal inport
-	const chalk = await import('chalk').then(chalk => chalk.default);
 	console.info('\n');
 	console.info(chalk.bold.rgb(...colors.green)('Component created! 🚀 '));
 	console.info(
@@ -63,8 +56,6 @@ const logConclusion = async () => {
 };
 
 const logError = async error => {
-	//TODO: Transform into normal inport
-	const chalk = await import('chalk').then(chalk => chalk.default);
 	console.info('\n');
 	console.info(chalk.bold.rgb(...colors.red)('Error creating component.'));
 	console.info(chalk.rgb(...colors.red)(error));
