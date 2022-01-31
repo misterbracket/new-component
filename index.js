@@ -10,7 +10,7 @@
 const init = require('./utils/init');
 const cli = require('./utils/cli');
 const { log } = require('./utils/log');
-const createComponent = require('./helpers/createComponent');
+const createComponent = require('./utils/createComponent');
 
 const input = cli.input;
 const flags = cli.flags;

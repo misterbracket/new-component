@@ -7,13 +7,13 @@ const {
 	logItemCompletion,
 	logConclusion,
 	logError
-} = require('./../utils/log');
+} = require('./log');
 
 const {
 	mkDirPromise,
 	readFilePromiseRelative,
 	writeFilePromise
-} = require('./../utils/files');
+} = require('./files');
 
 const prettify = template => prettier.format(template, { parser: 'babel' });
 
