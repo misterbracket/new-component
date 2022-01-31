@@ -17,7 +17,6 @@ const flags = cli.flags;
 const { clear, debug, javascript, directory } = flags;
 
 (async () => {
-	// Runs the init from the utils/init.js file
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 	if (debug) {
