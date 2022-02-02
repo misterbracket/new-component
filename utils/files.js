@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
+module.exports.delDirPromise = dirPath =>
+	new Promise((resolve, reject) => {
+		fs.rmdir(dirPath, err => {
+			err ? reject(err) : resolve();
+		});
+	});
+
 module.exports.mkDirPromise = dirPath =>
 	new Promise((resolve, reject) => {
 		fs.mkdir(dirPath, err => {

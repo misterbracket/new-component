@@ -1,23 +1,15 @@
 # Create New React Component CLI
 
-## Installation
-
-Run `npm install` to install the package.
-
-Then run `npm link` create a global link to the package.
-
-You can nor run `new-component` from anywhere
-
 ## Usage
 
-Run `new-component help` to see the available commands.
+Run `npx @maxklammer/new-component help` to see the available commands.
 
 ```
-$ new-component <command> [option]
+$ npx @maxklammer/new-component <component-name> [option]
 
    COMMANDS
 
-  help  Create the a folder structure for a new component e.g. new-component Button
+  help You can use `npx @maxklammer/new-component <component-name>` from the command line.
 
    OPTIONS
 
@@ -30,3 +22,13 @@ $ new-component <command> [option]
 
 
 ```
+
+## Local Installation
+
+Run `npm install` to install the package.
+
+Then run `npm link` create a global link to the package.
+
+You can now run `new-component` from anywhere.
+
+Alternativly, try running `npx @maxklammer/new-component <ComponentName>` from the command line.

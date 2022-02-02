@@ -12,7 +12,8 @@ const {
 const {
 	mkDirPromise,
 	readFilePromiseRelative,
-	writeFilePromise
+	writeFilePromise,
+	delDirPromise
 } = require('./files');
 
 const prettify = template => prettier.format(template, { parser: 'babel' });
@@ -49,7 +50,7 @@ export { default } from './${componentName}';
 	const fullPathToParentDir = path.resolve(directory);
 	if (!fs.existsSync(fullPathToParentDir)) {
 		logError(
-			`Sorry, you need to create a parent "components" directory.\n(new-component is looking for a directory at ${directory}).`
+			`Sorry, you need to create the directory first.\n(@maxklammer/new-component is looking for a directory at ${directory}).`
 		);
 		return;
 	}
@@ -118,5 +119,6 @@ export { default } from './${componentName}';
 		})
 		.catch(err => {
 			console.error(err);
+			delDirPromise(componentDir);
 		});
 };

@@ -5,7 +5,7 @@ const pkg = require('../package.json');
 module.exports = ({ clear = true }) => {
 	unhandled();
 	welcome({
-		title: `new-component`,
+		title: `@maxklammer/new-component`,
 		tagLine: `by Max Klammer`,
 		version: pkg.version,
 		bgColor: '#36BB09',
