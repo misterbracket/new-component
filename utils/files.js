@@ -29,4 +29,4 @@ module.exports.writeFilePromise = (fileLocation, fileContent) =>
 // their project). This is unlike `require()` calls, which are always relative
 // to the code's directory.
 module.exports.readFilePromiseRelative = fileLocation =>
-	module.exports.readFilePromise(path.join(__dirname + '/../', fileLocation));
+	module.exports.readFilePromise(path.join(__dirname, fileLocation));
