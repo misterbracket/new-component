@@ -3,34 +3,19 @@ const meowHelp = require('cli-meow-help');
 
 const flags = {
 	directory: {
-		type: `string`,
+		type: 'string',
 		default: 'src/components',
-		alias: `dir`,
-		desc: `The directory structure to create the component in`
+		desc: 'The directory structure to create the component in'
 	},
 	javascript: {
-		type: `boolean`,
+		type: 'boolean',
 		default: false,
-		alias: `js`,
-		desc: `Create a JaveScript component`
-	},
-	clear: {
-		type: `boolean`,
-		default: false,
-		alias: `c`,
-		desc: `Clear the console`
-	},
-
-	debug: {
-		type: `boolean`,
-		default: false,
-		alias: `d`,
-		desc: `Print debug info`
+		desc: 'Create a JaveScript component'
 	},
 	version: {
-		type: `boolean`,
-		alias: `v`,
-		desc: `Print CLI version`
+		type: 'boolean',
+		alias: 'v',
+		desc: 'Print CLI version'
 	}
 };
 

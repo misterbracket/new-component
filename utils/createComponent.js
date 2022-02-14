@@ -83,7 +83,7 @@ export { default } from './${componentName}';
 			logItemCompletion('Component built and saved to disk.');
 			return template;
 		})
-		.then(template =>
+		.then(() =>
 			// We also need the `index.js` file, which allows easy importing.
 			writeFilePromise(indexPath, prettify(indexTemplate))
 		)
@@ -91,7 +91,7 @@ export { default } from './${componentName}';
 			logItemCompletion('Index file built and saved to disk.');
 			return template;
 		})
-		.then(template =>
+		.then(() =>
 			// We also need a __test__ folder for unit tests.
 			mkDirPromise(`${componentTestDir}`)
 		)
@@ -114,7 +114,7 @@ export { default } from './${componentName}';
 			);
 			return template;
 		})
-		.then(template => {
+		.then(() => {
 			logConclusion();
 		})
 		.catch(err => {

@@ -1,4 +1,3 @@
-const alert = require('cli-alerts');
 const chalk = require('chalk');
 
 //Chalk Colors
@@ -12,20 +11,9 @@ const colors = {
 	darkGray: [90, 90, 90]
 };
 
-module.exports.log = info => {
-	alert({
-		type: `warning`,
-		name: `DEBUG LOG`,
-		msg: ``
-	});
-
-	console.log(info);
-	console.log();
-};
-
 module.exports.logIntro = ({ name, dir }) => {
 	console.info(
-		`✨  Creating the ${chalk.bold.rgb(...colors.gold)(name)} component ✨`
+		`✨ Creating the ${chalk.bold.rgb(...colors.gold)(name)} component ✨`
 	);
 	console.info('\n');
 
